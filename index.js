@@ -14,9 +14,9 @@ function fetchWeatherAlerts(state) {
     .then(data => {
       displayAlerts(data, state);
     })
-    .catch(error => {
-      console.log(error.message);
-      showError(error.message);
+    .catch(errorObject => {
+      console.log(errorObject.message);
+      showError(errorObject.message);
     });
 };
 
