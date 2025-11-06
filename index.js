@@ -67,7 +67,7 @@ function showError(message) {
   errorDiv.classList.remove("hidden");
 };
 
-//Add an event listener
+//Add an event listener for the button
 document.getElementById("fetch-alerts").addEventListener("click", () => {
   const stateInput = document.getElementById("state-input").value.trim().toUpperCase();
   fetchWeatherAlerts(stateInput);
