@@ -3,7 +3,6 @@ const weatherApi = "https://api.weather.gov/alerts/active?area="
 
 //Function to fetch alerts
 function fetchWeatherAlerts(state) {
-
     fetch(`${weatherApi}${state}`)
     .then(response => {
       if (!response.ok) {
@@ -68,7 +67,7 @@ function showError(message) {
   errorDiv.classList.remove("hidden");
 };
 
-//Add event listener for button
+//Add an event listener
 document.getElementById("fetch-alerts").addEventListener("click", () => {
   const stateInput = document.getElementById("state-input").value.trim().toUpperCase();
   fetchWeatherAlerts(stateInput);
