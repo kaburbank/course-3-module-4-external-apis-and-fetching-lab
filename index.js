@@ -4,7 +4,7 @@ const weatherApi = "https://api.weather.gov/alerts/active?area="
 //Function to fetch alerts
 function fetchWeatherAlerts(state) {
 
-  fetch(`${weatherApi}${state}`)
+    fetch(`${weatherApi}${state}`)
     .then(response => {
       if (!response.ok) {
         throw new Error("Invalid state abbreviation");
